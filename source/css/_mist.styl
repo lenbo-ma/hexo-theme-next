@@ -2,7 +2,6 @@
 // Mist scheme
 // =================================================
 
-
 .test { border: 10px; }
 
 // Tags
@@ -11,12 +10,14 @@ h2, h3, h4, h5, h6 { margin: 20px 0 10px; }
 
 p { margin: 10px 0; }
 
-a { border-bottom-color: $grey; }
+a { border-bottom-color: $grey-light; }
 
 hr {
   margin: 20px 0;
   height: 2px;
 }
+
+ul li { list-style: circle; }
 
 
 // Components
@@ -147,7 +148,10 @@ hr {
   .post { margin-top: 80px; }
   .post:first-child { margin-top: 0; }
 
-  .post-meta { margin-bottom: 20px; }
+  .post-meta {
+    margin-top: 5px;
+    margin-bottom: 20px;
+  }
 
   .post-title {
     font-size: 28px;
@@ -172,7 +176,17 @@ hr {
   margin-top: 20px;
   text-align: left;
 
-  a { font-size: 14px; }
+  a {
+    padding: 0;
+    font-size: 16px;
+    color: $grey-dim;
+    background: none;
+    border: none;
+    border-bottom: 2px solid $grey-dim;
+    transition-property: border;
+
+    &:hover { border-bottom-color: $black-deep; }
+  }
 }
 
 

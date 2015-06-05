@@ -10,6 +10,9 @@
 
 ![NexT Preview](http://iissnan.com/nexus/next/desktop-preview.png)
 
+> Mist - Compact of NexT
+
+![Mist Preview](http://iissnan.com/nexus/next/mist-desktop-preview.png)
 
 ## 安装
 
@@ -21,6 +24,8 @@
 2. 更改**站点** `_config.yml` 中的 `theme` 字段设置为 `next`
 
         theme: next
+
+或者，你可以下载稳定的[发布版本](https://github.com/iissnan/hexo-theme-next/releases)。
 
 ## 更新
 
@@ -37,7 +42,7 @@ git pull
 特性概览：
 
 - [支持自定义 LOGO 以及主题图标](https://github.com/iissnan/hexo-theme-next/wiki/%E8%87%AA%E5%AE%9A%E4%B9%89LOGO%E4%BB%A5%E5%8F%8A%E4%B8%BB%E9%A2%98%E5%9B%BE%E6%A0%87)
-- [支持 英语 / 简体 中文双语](https://github.com/iissnan/hexo-theme-next/wiki/%E8%AE%BE%E7%BD%AE%E8%AF%AD%E8%A8%80)
+- [支持多语言：英语 / 简体中文 / 繁体中文 / 法语](https://github.com/iissnan/hexo-theme-next/wiki/%E8%AE%BE%E7%BD%AE%E8%AF%AD%E8%A8%80)
 - [支持 多说 / DISQUS 评论系统](https://github.com/iissnan/hexo-theme-next/wiki/%E8%AE%BE%E7%BD%AE%E5%A4%9A%E8%AF%B4-DISQUS%E8%AF%84%E8%AE%BA%E7%B3%BB%E7%BB%9F)
 - [支持 标签云 页面](https://github.com/iissnan/hexo-theme-next/wiki/%E5%88%9B%E5%BB%BA%E6%A0%87%E7%AD%BE%E4%BA%91%E9%A1%B5%E9%9D%A2)
 - [支持 分类 页面](https://github.com/iissnan/hexo-theme-next/wiki/%E5%88%9B%E5%BB%BA%E5%88%86%E7%B1%BB%E9%A1%B5%E9%9D%A2)
@@ -51,6 +56,8 @@ git pull
 - [支持数学公式显示（借助 MathJax）](https://github.com/iissnan/hexo-theme-next/wiki/%E5%BC%80%E5%90%AF%E6%95%B0%E5%AD%A6%E5%85%AC%E5%BC%8F%E6%98%BE%E7%A4%BA)
 - [设置侧边栏头像](https://github.com/iissnan/hexo-theme-next/wiki/%E8%AE%BE%E7%BD%AE%E4%BE%A7%E8%BE%B9%E6%A0%8F%E5%A4%B4%E5%83%8F)
 - [设置侧边栏社交链接](https://github.com/iissnan/hexo-theme-next/wiki/%E8%AE%BE%E7%BD%AE%E4%BE%A7%E8%BE%B9%E6%A0%8F%E7%A4%BE%E4%BA%A4%E9%93%BE%E6%8E%A5)
+
+- [Swiftype 站内搜索](https://github.com/iissnan/hexo-theme-next/wiki/Swiftype%E7%AB%99%E5%86%85%E6%90%9C%E7%B4%A2)
 
 
 ## 配置

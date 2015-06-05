@@ -1,11 +1,13 @@
 <!doctype html>
-<html class="theme-next {% if theme.use_motion %}use-motion{% endif %} {% if theme.theme %}theme-next-{{theme.theme}}{% endif %}">
+<html class="theme-next {% if theme.use_motion %}use-motion{% endif %} {% if theme.scheme %}theme-next-{{ theme.scheme | lower }}{% endif %}">
 <head>
   {% include '_partials/head.swig' %}
   <title>{% block title %}{% endblock %}</title>
 </head>
 
 <body>
+  {% include '_partials/old-browsers.swig' %}
+
   <div class="container one-column {% block page_class %}{% endblock %}">
     <div class="headband"></div>
 
@@ -18,26 +20,18 @@
     <div id="main" class="main">
       <div class="main-inner">
         <div id="content" class="content">
-          {% if is_home() or is_post() %}
-            {% set postsClass = "posts-expand" %}
-          {% else %}
-            {% set postsClass = "posts-collapse" %}
-          {% endif %}
-
-          <div id="posts" class="{{ postsClass }}">
-            {% block content %}{% endblock %}
-          </div>
-
-          {% if not is_post() and (page.prev || page.next) %}
-            <div class="pagination">
-              {{ paginator({prev_text: '&laquo;', next_text: '&raquo;', mid_size: 1}) }}
-            </div>
-          {% endif %}
+          {% block content %}{% endblock %}
         </div>
 
-        {% include '_partials/sidebar.swig' %}
-
+        {% if (theme.duoshuo_hotartical and page.title)  %}
+          <!-- 多说热评文章-->
+          <p>热评文章</p>
+          <div class="ds-top-threads" data-range="weekly" data-num-items="4"></div>
+        {% endif %}
       </div>
+
+
+      {% block sidebar %}{% endblock %}
     </div>
 
     <div id="footer" class="footer">
@@ -57,12 +51,22 @@
   {% include '_scripts/fancy-box.swig' %}
   {% include '_scripts/helpers.swig' %}
   {% include '_scripts/motion.swig' %}
+  {% if theme.scheme === "Mist" %}<script type="text/javascript" src="{{ url_for(theme.js) }}/mist.js"></script>{% endif %}
 
   {% block script_extra %}{% endblock %}
 
+  <script type="text/javascript">
+    $(document).ready(function () {
+      if (CONFIG.sidebar === 'always') {
+        displaySidebar();
+      }
+    });
+  </script>
+
   {% include '_scripts/mathjax.swig' %}
-  {% include '_scripts/comments/duoshuo.swig' %}
-  {% include '_scripts/comments/disqus.swig' %}
+  {% block comment_system %}{% endblock %}
+
+  {% include '_scripts/baidushare.swig' %}
   {% include '_scripts/analytics/google-analytics.swig' %}
 </body>
 </html>
